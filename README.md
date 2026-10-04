@@ -24,3 +24,13 @@ https://milannepali.github.io/hangout-student-cafe/
 ## API
 
 Restaurant data and menu information are fetched from the Metropolia restaurant API.
+
+## Validation
+
+### HTML validation
+
+![HTML validation](validator/html-validation.png)
+
+### CSS validation
+
+![CSS validation](validator/css-validation.png)
