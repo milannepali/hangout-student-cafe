@@ -1,6 +1,10 @@
 # Hangout Student Cafe
 
-Hangout Student Cafe is a simple web application for finding student restaurants in Finland.
+Hangout Student Cafe is a simple web application for finding student restaurants in Finland and viewing their menus.
+
+## Live website
+
+https://milannepali.github.io/hangout-student-cafe/
 
 ## Features
 
@@ -8,6 +12,7 @@ Hangout Student Cafe is a simple web application for finding student restaurants
 - Filter restaurants by city
 - View daily menus
 - View weekly menus
+- Handle restaurants that do not have menu data available
 
 ## Technologies
 
@@ -18,4 +23,4 @@ Hangout Student Cafe is a simple web application for finding student restaurants
 
 ## API
 
-Restaurant data is fetched from the Metropolia restaurant API.
+Restaurant data and menu information are fetched from the Metropolia restaurant API.
