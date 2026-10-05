@@ -6,6 +6,11 @@
 
     <title>Hangout Student Cafe</title>
 
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -17,13 +22,136 @@
 
     <main>
       <section>
+        <h2>User Account</h2>
+
+        <div id="auth-forms">
+          <div class="auth-box">
+            <h3>Login</h3>
+
+            <form id="login-form">
+              <input
+                type="text"
+                id="login-username"
+                placeholder="Username"
+                required
+              />
+
+              <input
+                type="password"
+                id="login-password"
+                placeholder="Password"
+                required
+              />
+
+              <button type="submit">Login</button>
+            </form>
+          </div>
+
+          <div class="auth-box">
+            <h3>Register</h3>
+
+            <form id="register-form">
+              <input
+                type="text"
+                id="register-username"
+                placeholder="Username"
+                required
+              />
+
+              <input
+                type="email"
+                id="register-email"
+                placeholder="Email"
+                required
+              />
+
+              <input
+                type="password"
+                id="register-password"
+                placeholder="Password"
+                required
+              />
+
+              <button type="submit">Register</button>
+            </form>
+          </div>
+        </div>
+
+        <div id="user-info" class="hidden">
+          <h3>My Account</h3>
+
+          <img
+            id="profile-image"
+            class="profile-image hidden"
+            alt="Profile picture"
+          />
+
+          <p id="user-name"></p>
+          <p id="user-email"></p>
+
+          <div class="avatar-box">
+            <label for="avatar-input"> Profile picture </label>
+
+            <input type="file" id="avatar-input" accept="image/*" />
+
+            <button type="button" id="upload-avatar-button">
+              Upload Picture
+            </button>
+          </div>
+
+          <button id="edit-profile-button" type="button">Edit Profile</button>
+
+          <button id="logout-button" type="button">Logout</button>
+
+          <div id="edit-profile" class="hidden">
+            <h3>Edit Profile</h3>
+
+            <form id="profile-form">
+              <label for="profile-username"> Username </label>
+
+              <input type="text" id="profile-username" />
+
+              <label for="profile-email"> Email </label>
+
+              <input type="email" id="profile-email" />
+
+              <label for="profile-password"> New password </label>
+
+              <input
+                type="password"
+                id="profile-password"
+                placeholder="Leave empty to keep old password"
+              />
+
+              <button type="submit">Save Changes</button>
+
+              <button type="button" id="cancel-edit-button">Cancel</button>
+            </form>
+          </div>
+        </div>
+
+        <p id="auth-message"></p>
+      </section>
+
+      <section>
         <h2>Restaurants</h2>
 
-        <select id="city-filter">
-          <option value="all">All cities</option>
-        </select>
+        <div class="controls">
+          <select id="city-filter">
+            <option value="all">All cities</option>
+          </select>
+
+          <button id="nearest-button">Find nearest restaurant</button>
+        </div>
+
+        <p id="nearest-info"></p>
 
         <div id="restaurant-list"></div>
+      </section>
+
+      <section>
+        <h2>Restaurant Map</h2>
+        <div id="map"></div>
       </section>
 
       <section>
@@ -35,6 +163,7 @@
       </section>
     </main>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

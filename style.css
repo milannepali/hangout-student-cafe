@@ -28,12 +28,96 @@ section {
   border-radius: 8px;
 }
 
+#auth-forms {
+  display: flex;
+  gap: 30px;
+}
+
+.auth-box {
+  flex: 1;
+}
+
+.auth-box input,
+#profile-form input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#profile-form {
+  margin-top: 20px;
+  max-width: 500px;
+}
+
+#profile-form label {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+#auth-message {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.avatar-box {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.avatar-box label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.avatar-box input {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
 #city-filter {
   padding: 10px;
-  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
 }
 
 #restaurant-list {
@@ -58,22 +142,26 @@ section {
 }
 
 .restaurant-card p {
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 
-button {
-  padding: 10px 15px;
-  margin-right: 10px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 6px;
-  background-color: #333;
-  color: white;
-  cursor: pointer;
+.nearest {
+  border: 3px solid #333;
+  background-color: #e8e8e8;
 }
 
-button:hover {
-  background-color: #555;
+.nearest-label {
+  font-weight: bold;
+}
+
+#nearest-info {
+  font-weight: bold;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 #menu-content {
@@ -88,4 +176,10 @@ button:hover {
 #menu-content h4 {
   margin-top: 25px;
   font-size: 18px;
+}
+
+@media (max-width: 700px) {
+  #auth-forms {
+    flex-direction: column;
+  }
 }
